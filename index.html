@@ -11,6 +11,7 @@ Hey, you're not permitted in there. It's restricted. You'll be deactivated for s
 
 </p>
 <script charset="UTF-8">
+    
     const paragraph = document.querySelector('p');
     paragraph.innerHTML=paragraph.innerHTML.replace(/!/g,"😯");
     paragraph.innerHTML=paragraph.innerHTML.replace(/\?/g,"🤔");
@@ -19,14 +20,16 @@ Hey, you're not permitted in there. It's restricted. You'll be deactivated for s
     .map(word => word.length > 8 ? `<span style="background-color: yellow">${word}</span>` : word)
     .join(' ');
     
-    paragraph.innerHTML = paragraph.innerHTML
-    .split('.')
-    .join('<p></p>') + '</p>'
-    
     const wordCount = paragraph.innerText.split(' ').length;
     const wordCountElem = document.createElement('i');
     wordCountElem.innerText = `${wordCount} words`;
     document.body.insertBefore(wordCountElem,paragraph);
+    
+    paragraph.innerHTML = paragraph.innerHTML
+    .split('.')
+    .join('<p></p>') + '</p>'
+    
+    
     
     Array.from(document.querySelector('p'))
      .forEach(p =>{
