@@ -28,6 +28,13 @@ Hey, you're not permitted in there. It's restricted. You'll be deactivated for s
     wordCountElem.innerText = `${wordCount} words`;
     document.body.insertBefore(wordCountElem,paragraph);
     
+    Array.from(document.querySelector('p'))
+     .forEach(p =>{
+        p.innerHTML = p.innerHTML
+        p1 = $('<p></p>')
+            .replace("/ud83c/g","😀");
+       
+         //.replace("/\?/g", "😀");
          
     })
 </script>
